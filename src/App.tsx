@@ -2,9 +2,16 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import getEnvConfig from './utils/config'
 
 function App() {
+  const config = getEnvConfig();
+  console.log("🚀 ~ file: App.tsx:9 ~ App ~ config:", config) // 123)
   const [count, setCount] = useState(0)
+
+  const handleClick = (count) =>{
+    setCount((count)=>count+1);
+  }
 
   return (
     <>
@@ -18,7 +25,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={() => handleClick(count)}>
           count is {count}
         </button>
         <p>
