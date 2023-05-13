@@ -29,20 +29,5 @@
     "typescript": "^5.0.2",
     "vite": "^4.3.2",
     "vitest": "^0.31.0"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "lint -c",
-      "git add"
-    ]
   }
 }
